@@ -12,8 +12,8 @@ public class WebfluxHandler {
     public Mono<ServerResponse> getInfo(ServerRequest request) {
 
         String name = request.queryParam("name").get();
-        Infos message = new Infos("", "");
-
+        Infos message = new Infos("", "testJob");
+        System.out.println("받았지롱");
         return ServerResponse.ok().contentType(MediaType.APPLICATION_JSON).bodyValue(message);
     }
 }
