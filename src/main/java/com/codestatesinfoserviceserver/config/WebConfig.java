@@ -1,6 +1,6 @@
 package com.codestatesinfoserviceserver.config;
 
-import com.codestateswebflux.handler.WebfluxHandler;
+import com.codestatesinfoserviceserver.handler.WebfluxHandler;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.reactive.config.EnableWebFlux;
@@ -16,6 +16,6 @@ import static org.springframework.web.reactive.function.server.RequestPredicates
 public class WebConfig implements WebFluxConfigurer {
     @Bean
     public RouterFunction<ServerResponse> routes(WebfluxHandler handler) {
-        return RouterFunctions.route(GET("/hello"), handler::getChats);
+        return RouterFunctions.route(GET("/info"), handler::getInfo);
     }
 }

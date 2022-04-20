@@ -4,7 +4,7 @@ public class Infos {
 
     private String name;
 
-    private String message;
+    private String job;
 
     public String getName() {
         return name;
@@ -14,16 +14,16 @@ public class Infos {
         this.name = name;
     }
 
-    public String getMessage() {
-        return message;
+    public String getJob() {
+        return job;
     }
 
-    public void setMessage(String message) {
-        this.message = message;
+    public void setJob(String job) {
+        this.job = job;
     }
 
-    public Chats(String name, String message) {
+    public Infos(String name, String job) {
         this.name = name;
-        this.message = message;
+        this.job = job;
     }
 }

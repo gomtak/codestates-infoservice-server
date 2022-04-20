@@ -1,6 +1,6 @@
 package com.codestatesinfoserviceserver.handler;
 
-import com.codestateswebflux.entity.Chats;
+import com.codestatesinfoserviceserver.entity.Infos;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.server.ServerRequest;
@@ -9,10 +9,10 @@ import reactor.core.publisher.Mono;
 
 @Component
 public class WebfluxHandler {
-    public Mono<ServerResponse> getChats(ServerRequest request) {
+    public Mono<ServerResponse> getInfo(ServerRequest request) {
 
         String name = request.queryParam("name").get();
-        Chats message = new Chats(name, "hello " + name);
+        Infos message = new Infos("", "");
 
         return ServerResponse.ok().contentType(MediaType.APPLICATION_JSON).bodyValue(message);
     }
